@@ -1,0 +1,83 @@
+main
+{
+	height: calc(100vh - 50px);
+	overflow-y: hidden;
+	display: flex;
+}
+
+#main-wrapper
+{
+	flex-grow: 1;
+	height: 100%;
+	overflow-y: auto;
+	background-color:lightgray;
+	;
+}
+
+#sidebar
+{
+	height: 100%;
+	width: 228px;	flex-shrink: 0;
+	border-radius: 10px;
+	background-color: #146ac0;
+	overflow-y: auto;
+	transition: 0.15s linear;
+	margin-top: 7px;
+}
+
+#sidebar-toggler-btn
+{
+	cursor: pointer;
+}
+
+.sidebar-hide
+{
+	width: 0px !important;
+}
+
+#sidebar ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+#sidebar ul li
+{
+	color: white;
+	font-size: 18px;
+}
+
+#sidebar ul li:first-child, #sidebar ul li:last-child
+{
+	text-align: center;
+	margin: 5px;
+}
+
+#sidebar ul li a:not(.btn)
+{
+	text-decoration: none;
+	color: #c5bec9;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 15px;
+}
+#sidebar ul li a.active
+{
+	color: white;
+	background-color: #595963;
+	border-left: 4px solid var(--theme-color);
+}
+#sidebar ul li a:not(.btn):hover
+{
+	background-color: #656570;
+}
+
+#sidebar-nav li:first-child {
+    margin-top: 20px; /* Welcome Message ને નીચે લાવવા માટે */
+    text-align: center;
+}
+
+#sidebar-nav p {
+    padding: 10px 15px; /* Welcome box માટે વધુ spacing */
+    margin-bottom: 10px; /* Welcome box અને list વચ્ચે gap */
+}

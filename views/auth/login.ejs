@@ -1,0 +1,32 @@
+<div class="d-flex vh-100" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">
+    <!-- Right Side - Promo Text & Image -->
+    <div class="d-flex align-items-center justify-content-center text-white p-5" style="width: 50%; flex-direction: column; background: linear-gradient(135deg, #ff7043, #ffccbc);">
+        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg" alt="Login Illustration" style="width: 80%; max-width: 400px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 30px;">
+        <h2 style="font-size: 32px; font-weight: bold;">Welcome Back!</h2>
+        <p style="font-size: 18px; text-align: center; max-width: 400px;">Login to access your personalized dashboard and explore amazing features tailored just for you!</p>
+    </div>
+    
+    <!-- Left Side - Login Form -->
+    <div class="d-flex align-items-center justify-content-center" style="width: 50%; background: #fff3e0;">
+        <div class="card shadow-lg p-5" style="width: 60%; border-radius: 20px; background: #fff;">
+            <h2 class="text-center mb-4" style="color: #d84315; font-weight: bold; font-size: 28px;">User Login</h2>
+            <form action="/auth/login" method="POST">
+                <div class="mb-4">
+                    <label for="email" class="form-label" style="color: #6d4c41; font-weight: 600; font-size: 20px;">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email.." required autofocus style="border-radius: 12px; border: 2px solid #ff7043; font-size: 18px; padding: 10px;">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="form-label" style="color: #6d4c41; font-weight: 600; font-size: 20px;">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter password.." required style="border-radius: 12px; border: 2px solid #ff7043; font-size: 18px; padding: 10px;">
+                </div>
+                <button type="submit" class="btn w-100 py-3 mt-4" style="background: #d84315; color: white; font-size: 20px; border-radius: 12px;">Login</button>
+                <div class="text-center mt-4">
+                    <span style="color: #6d4c41; font-size: 16px;">Don't have an account?</span> 
+                    <a href="/auth/signup" class="text-decoration-none" style="color: #ff5722; font-weight: bold; font-size: 16px;">Signup here</a>
+                    <br>
+                    <a href="/auth/forgotPassword" class="text-decoration-none" style="color: #ff5722; font-weight: bold; font-size: 16px;">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,326 @@
+<!-- Donation Container -->
+<div
+    style="display: flex; flex-wrap: wrap; max-width: 1500px; margin: 50px auto; font-family: 'Segoe UI', sans-serif; gap: 30px; padding: 20px;">
+
+    <!-- LEFT: Donation Form Box -->
+    <div
+        style="flex: 1 1 40%; display: flex; flex-direction: column; justify-content: center; padding: 24px 28px; background: #fffdfa; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
+
+        <h3 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 18px; color: #222;">
+            🌟 Your Help Brings Hope
+        </h3>
+
+        <p style="font-size: 1.2rem; color: #333; margin-bottom: 20px; line-height: 1.75;">
+            A small act of kindness can mean the world to someone. <br>
+            Provide food, shelter, and a chance for a better tomorrow. 🌍
+        </p>
+
+        <img src="/assets/images/img-1.jpg" alt="Volunteer giving food to child"
+            style="width: 100%; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+
+        <blockquote
+            style="font-size: 1.05rem; color: #666; font-style: italic; border-left: 5px solid #ff6b6b; padding-left: 14px; margin-bottom: 24px;">
+            “No one has ever become poor by giving.” – Anne Frank
+        </blockquote>
+
+        <img src="/assets/images/img-2.jpg" alt="Happy children receiving aid"
+            style="width: 100%; border-radius: 16px; margin-bottom: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+
+        <p style="font-size: 1.1rem; color: #444; line-height: 1.7; margin-bottom: 20px;">
+            💡 <strong>Your kindness is a light in someone’s darkness.</strong><br>
+            Be the reason someone believes in humanity again.
+        </p>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="#donate-now"
+                style="display: inline-block; padding: 14px 28px; background: linear-gradient(to right, #ff6b6b, #ff8787); color: white; font-size: 1.15rem; font-weight: bold; border-radius: 35px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.3s;">
+                ❤️ Donate Now & Make a Change
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- RIGHT: Visual Story Section -->
+    <!-- Donation Box -->
+    <div
+        style="flex: 1 1 55%; padding: 40px; background: #fff; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; text-align: center; color: #2d2d2d;">
+            Support
+            Our Mission</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1rem;">Your donation helps feed the
+            hungry and spread hope. Every contribution counts.</p>
+
+        <!-- Amount Buttons -->
+        <div id="amount-options"
+            style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 25px;">
+            <button class="amt-btn" data-amt="100">₹100</button>
+            <button class="amt-btn" data-amt="500">₹500</button>
+            <button class="amt-btn" data-amt="1000">₹1000</button>
+            <button class="amt-btn" data-amt="custom">Other</button>
+        </div>
+
+        <!-- Live Preview -->
+        <p id="preview" style="text-align: center; font-weight: 600; font-size: 1.3rem; color: #388e3c; display: none;">
+            You're donating ₹<span id="preview-value">0</span></p>
+
+        <!-- Custom Amount Input -->
+        <input type="number" id="amount-input" placeholder="Enter custom amount (₹)"
+            style="width: 100%; padding: 15px; margin-top: 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 12px; font-size: 1.1rem; display: none;">
+
+        <!-- Frequency -->
+        <label for="frequency" style="font-weight: 600; font-size: 1.1rem;">Donation Frequency</label>
+        <select id="frequency"
+            style="width: 100%; padding: 12px 15px; margin-top: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; font-size: 1.1rem;">
+            <option value="one-time">One-Time</option>
+            <option value="recurring">Recurring</option>
+        </select>
+
+        <!-- Recurring Date -->
+        <input type="date" id="recurring-date"
+            style="width: 100%; padding: 12px 15px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 10px; font-size: 1.1rem; display: none;">
+
+        <!-- Anonymous Toggle -->
+        <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 1.05rem;">
+            <input type="checkbox" id="anonymous"> Donate Anonymously
+        </label>
+
+        <!-- Donor Info -->
+        <input type="text" id="name" placeholder="Your Name"
+            style="width: 100%; padding: 12px 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 10px; font-size: 1.1rem;">
+        <input type="email" id="email" placeholder="Your Email"
+            style="width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; font-size: 1.1rem;">
+
+        <!-- Message -->
+        <textarea id="message" placeholder="Leave a message (optional)" rows="3"
+            style="width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 10px; font-size: 1.05rem;"></textarea>
+
+        <!-- Save Info -->
+        <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 25px; font-size: 1.05rem;">
+            <input type="checkbox" id="save-info"> Save my info for future donations
+        </label>
+
+        <!-- Donation Summary -->
+        <div id="summary" style="text-align: center; display: none; margin-bottom: 25px;">
+            <p><strong style="font-size: 1.3rem;">Donation Summary</strong></p>
+            <p style="font-size: 1.1rem;">Amount: ₹<span id="summary-amount">0</span></p>
+            <p style="font-size: 1.1rem;">Frequency: <span id="summary-frequency">One-Time</span></p>
+            <p id="summary-date" style="font-size: 1.05rem;"></p>
+            <p id="summary-message" style="font-size: 1rem; color: #666;"></p>
+        </div>
+
+        <!-- Payment Methods -->
+        <div id="payment-methods" style="display: none; margin-top: 30px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Choose Your Payment Method</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                <button onclick="showPaymentOption('gpay')" class="pay-btn" style="background: #4285F4;">Google
+                    Pay</button>
+                <button onclick="showPaymentOption('phonepe')" class="pay-btn"
+                    style="background: #00A2A6;">PhonePe</button>
+                <button onclick="showPaymentOption('card')" class="pay-btn" style="background: #4CAF50;">Credit/Debit
+                    Card</button>
+            </div>
+        </div>
+
+        <!-- GPay / PhonePe QR Section -->
+        <div id="qr-section" style="display: none; margin-top: 30px; text-align: center;">
+            <h4 style="font-size: 1.3rem; margin-bottom: 10px;" id="qr-title"></h4>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi_id_here&size=200x200" id="qr-image"
+                alt="QR Code" style="margin-bottom: 15px;">
+            <p style="font-size: 1.1rem;">Scan this QR or pay via UPI ID:</p>
+            <p style="font-size: 1.2rem; font-weight: bold; color: #2e7d32;" id="upi-id">donate@upi</p>
+            <button onclick="showToast('✅ Payment Received! Thank you.')" class="pay-btn"
+                style="background: #2e7d32; margin-top: 20px;">I Have Paid</button>
+        </div>
+
+        <!-- Card Payment Form -->
+        <div id="card-section" style="display: none; margin-top: 30px;">
+            <h4 style="text-align: center; font-size: 1.3rem; margin-bottom: 15px;">Enter Card Details</h4>
+            <input type="text" placeholder="Card Number"
+                style="width: 100%; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ccc; font-size: 1.1rem;">
+            <div style="display: flex; gap: 10px;">
+                <input type="text" placeholder="MM/YY"
+                    style="flex: 1; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ccc; font-size: 1.1rem;">
+                <input type="text" placeholder="CVV"
+                    style="flex: 1; padding: 15px; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ccc; font-size: 1.1rem;">
+            </div>
+            <button onclick="showToast('✅ Card Payment Successful! Thank you.')" class="pay-btn"
+                style="background: #2e7d32; width: 100%;">Pay Now</button>
+        </div>
+
+
+        <!-- Donate + Clear Buttons -->
+        <div style="display: flex; gap: 15px; margin-top: 25px;">
+            <button onclick="submitDonation()"
+                style="flex: 1; padding: 16px; background: linear-gradient(135deg, #42e695, #3bb2b8); color: white; border: none; font-size: 1.3rem; font-weight: bold; border-radius: 40px; cursor: pointer;">Donate
+                Now</button>
+            <button onclick="resetForm()"
+                style="flex: 1; padding: 16px; background: #eee; color: #555; border: none; font-size: 1.3rem; font-weight: bold; border-radius: 40px; cursor: pointer;">Clear</button>
+        </div>
+
+        <p style="text-align: center; font-size: 1.05rem; color: gray; margin-top: 25px;">🔒 100% Secure Payments via
+            Trusted Gateway</p>
+    </div>
+
+</div>
+<!-- Donation Container End -->
+
+<!-- Toast -->
+<div id="toast"
+    style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #4caf50; color: white; padding: 14px 28px; border-radius: 10px; font-size: 1rem; display: none; z-index: 1000;">
+</div>
+
+<!-- Styles -->
+<style>
+    .amt-btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 30px;
+        background: #42e695;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .amt-btn.active,
+    .amt-btn:hover {
+        background: #2e7d32 !important;
+        transform: scale(1.05);
+    }
+
+    .pay-btn {
+        padding: 12px 24px;
+        margin: 8px;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .pay-btn:hover {
+        opacity: 0.95;
+        transform: scale(1.05);
+    }
+</style>
+
+<!-- Script -->
+<script>
+    const buttons = document.querySelectorAll('.amt-btn');
+    const input = document.getElementById('amount-input');
+    const preview = document.getElementById('preview');
+    const previewValue = document.getElementById('preview-value');
+    const frequencySelect = document.getElementById('frequency');
+    const recurringDateInput = document.getElementById('recurring-date');
+    const summarySection = document.getElementById('summary');
+    const summaryAmount = document.getElementById('summary-amount');
+    const summaryFrequency = document.getElementById('summary-frequency');
+    const summaryDate = document.getElementById('summary-date');
+    const summaryMessage = document.getElementById('summary-message');
+    const paymentMethods = document.getElementById('payment-methods');
+    const toast = document.getElementById('toast');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (btn.dataset.amt === "custom") {
+                input.style.display = "block";
+                input.focus();
+                preview.style.display = "none";
+            } else {
+                input.style.display = "none";
+                preview.style.display = "block";
+                previewValue.innerText = btn.dataset.amt;
+            }
+        });
+    });
+
+    input.addEventListener('input', () => {
+        preview.style.display = "block";
+        previewValue.innerText = input.value || 0;
+    });
+
+    frequencySelect.addEventListener('change', () => {
+        recurringDateInput.style.display = frequencySelect.value === "recurring" ? "block" : "none";
+    });
+
+    function submitDonation() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const anonymous = document.getElementById("anonymous").checked;
+        let amount = input.style.display === "block" ? input.value : document.querySelector('.amt-btn.active')?.dataset.amt;
+        const frequency = frequencySelect.value;
+        const recurringDate = recurringDateInput.value;
+
+        if ((!anonymous && (!name || !email)) || !amount || isNaN(amount) || amount <= 0) {
+            alert("Please fill all required fields correctly.");
+            return;
+        }
+
+        summaryAmount.innerText = amount;
+        summaryFrequency.innerText = frequency;
+        summaryDate.innerText = frequency === "recurring" ? `Next Payment Date: ${recurringDate}` : '';
+        summaryMessage.innerText = message ? `Message: "${message}"` : '';
+        summarySection.style.display = "block";
+        paymentMethods.style.display = "block";
+        summarySection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetForm() {
+        document.querySelectorAll('input, textarea').forEach(el => {
+            if (el.type !== "checkbox") el.value = "";
+            else el.checked = false;
+        });
+        input.style.display = "none";
+        preview.style.display = "none";
+        recurringDateInput.style.display = "none";
+        summarySection.style.display = "none";
+        paymentMethods.style.display = "none";
+        buttons.forEach(btn => btn.classList.remove('active'));
+    }
+
+    function showPaymentOption(method) {
+        const qr = document.getElementById('qr-section');
+        const card = document.getElementById('card-section');
+        const qrTitle = document.getElementById('qr-title');
+        const qrImage = document.getElementById('qr-image');
+        const upiId = document.getElementById('upi-id');
+
+        qr.style.display = "none";
+        card.style.display = "none";
+
+        if (method === 'gpay') {
+            qr.style.display = "block";
+            qrTitle.innerText = "Pay via Google Pay";
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?data=donate@upi&size=200x200";
+            upiId.innerText = "donate@upi";
+        } else if (method === 'phonepe') {
+            qr.style.display = "block";
+            qrTitle.innerText = "Pay via PhonePe";
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?data=donatephonepe@upi&size=200x200";
+            upiId.innerText = "donatephonepe@upi";
+        } else if (method === 'card') {
+            card.style.display = "block";
+        }
+    }
+
+
+    function payWith(method) {
+        showToast(`✅ Thank you! Proceeding with ${method}.`);
+    }
+
+    function showToast(message) {
+        toast.innerText = message;
+        toast.style.display = "block";
+        setTimeout(() => toast.style.display = "none", 3000);
+    }
+
+
+</script>

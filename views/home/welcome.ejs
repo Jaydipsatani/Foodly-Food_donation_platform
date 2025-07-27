@@ -1,0 +1,61 @@
+<div style="height: 89vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(-45deg, #ff758c, #ff7eb3, #ff92a9, #ffb2c1); background-size: cover; color: white;">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        .carousel img {
+            border-radius: 15px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+    <!-- Hero Section Container -->
+<!-- Hero Section Container -->
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    
+    <!-- Food Donation Box -->
+    <div style="flex: 1; min-width: 300px; max-width: 600px; animation: fadeIn 1.5s ease-in-out; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px);">
+        <h1 style="font-weight: bold; font-size: 2.5rem;">Make a Difference, Donate Food</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 20px;">Your small act of kindness can save lives. Contribute leftover or surplus food and fight hunger.</p>
+        <a href="/auth/login" class="btn-hover" style="display: inline-block; background: linear-gradient(135deg, #ff758c, #ff7eb3); color: white; padding: 12px 24px; font-weight: bold; border-radius: 30px; text-decoration: none; transition: all 0.3s ease-in-out;">Donate Food</a>
+    </div>
+
+    <!-- Money Donation Box -->
+    <div style="flex: 1; min-width: 300px; max-width: 600px; animation: fadeIn 1.5s ease-in-out; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; backdrop-filter: blur(10px);">
+        <h1 style="font-weight: bold; font-size: 2.5rem;">Support the Cause, Donate Money</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 20px;">Your donation helps us reach more people in need with food, essentials, and support services.</p>
+        <a href="/money_donor/donate-money" class="btn-hover" style="display: inline-block; background: linear-gradient(135deg, #42e695, #3bb2b8); color: white; padding: 12px 24px; font-weight: bold; border-radius: 30px; text-decoration: none; transition: all 0.3s ease-in-out;">Donate Money</a>
+    </div>
+</div>
+
+
+
+    <!-- Carousel Section -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" style="width: 75%; margin-top: 30px; border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 15px rgba(0,0,0,0.3);">
+        <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+                <img src="/assets/images/img-1.jpg" style="max-height: 450px; object-fit: contain; padding: 10px;" alt="Slide 1">
+            </div>
+            <div class="carousel-item text-center">
+                <img src="/assets/images/img-2.jpg" style="max-height: 450px; object-fit: contain; padding: 10px;" alt="Slide 2">
+            </div>
+            <div class="carousel-item text-center">
+                <img src="/assets/images/img-3.jpg" style="max-height: 450px; object-fit: contain; padding: 10px;" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 12px; position: absolute; left: 50px; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="background-color: rgba(0, 0, 0, 0.6); border-radius: 10px; padding: 12px; position: absolute; right: 50px; top: 50%; transform: translateY(-50%);">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
